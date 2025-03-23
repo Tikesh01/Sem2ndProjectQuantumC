@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Quantum Clustering App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img src="../static/logoLite.png" alt="Logo" class="logo" />
+        <h1 class="title">Quantum-Clustering App</h1>
+      </nav>
+    </header>
+    <main>
+      <section class="upload-section">
+        <div class="form-container">
+          <h2>Upload Your File</h2>
+          <form action="/uploader" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="getFile" class="file-label">Choose File</label>
+            <input type="file" name="file" id="getFile" required />
+            <button type="submit">Upload</button>
+            <p class="message">{{ error }}</p>
+          </form>
+        </div>
+      </section>
+      <div class = "theContent">
+        {{data}}
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Quantum Clustering App. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
