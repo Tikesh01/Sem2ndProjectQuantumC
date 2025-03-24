@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import csv
 from io import StringIO
+from openpyxl import Workbook
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,20 +24,24 @@ def getFile( ):
         file.save(filePath)
         with open(filePath,"r",encoding= "utf-8") as file: # mode "r" and encoding helps to access a file as a string
             fileContent = file.read()# Read is a method to get the content of the file
-            return printer(fileContent,uploadedFileExtension)     
+            return printer(fileContent,uploadedFileExtension,filePath)     
         # return render_template("index.html", massage=f"File uploaded succesfully")
-       
     else:
         return render_template("index.html", error=f"only {listOfExtension} files are allowed")
 
-def printer(fileC,type):
+def printer(fileC,type,thefile):
     #if The uploaded file is CSV
     if type == "csv":
-        arr = np.array(fileC.split("\n"))
-        lenth = arr.__len__()
-        d2Array = arr.reshape(lenth,1)
-        return render_template("index.html",data = f"{d2Array}\n")
+        # rows = np.array(fileC.split("\n"))# file ka array sirf row me 1d array
+        # noOfRows = rows.__len__()#toatal rows 
+        # cols = np.array(rows[0].split(','))#rows me colums 
+        # noOfCols = cols.__len__()# total colums
+        # array = np.array(fileC.split(',')).reshape(noOfRows,noOfCols)
+        # return render_template("index.html",data = f"{array}\n")
+        df = pd.read_csv(thefile)
+        df = df.dropna(how="all")  # Remove empty rows
+        return render_template("index.html", table=df.to_html(classes="UploadedData", border=0))
+        # return render_template("index.html", table = df.to_html(classes="",col_space="2em"))
     
-
 if __name__ == "__main__":
     app.run(debug = True)
