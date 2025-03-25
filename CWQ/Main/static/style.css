@@ -187,8 +187,8 @@ main {
 #second {
     width: 100%;
     height: auto;
-    padding: 1em 4em;
-    margin-top: 38em;
+    padding: 2em 4em;
+    margin-top: 39em;
     background: rgba(255, 255, 255, 0.1); 
     border-radius: 10px;
     color: rgb(0, 179, 255);
@@ -207,13 +207,13 @@ main {
    
 }
 #second h1:hover {
-    color: #3f51b5;
+    color: #3f51b5c5;
     transform: scale(1.05);
 }
 
 /* Improved data table with animations and fade-in effect */
 #dataTable {
-    width: 70%;
+    width: 80%;
     /* height: 30%; */
     max-height: 37em; /* Allows responsiveness */
     /* height: 100%; */
@@ -323,7 +323,7 @@ main {
 }
 
 #clusteredTable {
-    width: 70%;
+    width: 80%;
     max-height: 37em;
     overflow-x: auto;
     overflow-y: auto;
@@ -343,6 +343,45 @@ main {
     border-color: #3f51b5;
     box-shadow: 0 8px 16px rgba(0, 150, 200, 0.3);
 }
+
+/*footer started8*/
+.footer {
+    background: linear-gradient(to right, #111, #222); /* Gradient for depth */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #555;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: #00c8ff; /* Neon Blue Effect */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff00ff; /* Pink Hover Effect */
+    text-shadow: 0px 0px 10px #ff00ff;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
 @media (min-width: 1660px) and (max-width: 3000px) {
     .upper_of_main {
         display: block;
@@ -381,37 +420,71 @@ main {
             margin-left: 1.25em;
         }
     }
-
-    main {
-        width: 80%;
-        margin-top: 2.5%;
-
-        .main_container {
-            height: 55em;
+}
+/* Mobile devices (max-width: 500px) */
+@media (max-width: 500px) {
+    body{
+        height: auto;
+    }
+    main{
+        /* background-color: #11111174; */
+        width: 50em;
+        height: auto;
+        padding: 5em 4em;
+        #main_container1{
+            float: none;
+            width: 100%;
+            border-radius: 80px;
+            border-top: 0.9em black solid;
+            border-bottom: none;
+            padding: 4em 4em;
         }
-
-        #main_container1 {
-            padding: 5em 12em;
-
-            li {
-                h2 {
-                    font-size: 9rem;
+        #main_container2{
+            float: none;
+            width: 100%;
+            margin-bottom: -42em;
+            border-radius: 80px;
+            #inputField{
+                width: 80%;
+                height: 80%;
+                margin-bottom: -1em;
+                padding: 3em 3em;
+                font-size: larger;
+                #inputAndLabel{
+                    margin-top: 3.5em;
                 }
-
-                #withus {
-                    font-size: 4rem;
+                button{
+                    width: 70%;
+                    height: 12%;
+                    background-color: rgb(0, 179, 255);
+                    font-size: large;
+                    margin-top: 4em;
+                    color: black;
+                }
+                button:hover{
+                    border-right: 30px solid white;
                 }
             }
-
-            #explorebuttonli {
-                button {
-                    font-size: x-large;
-                    border-radius: 30px;
-                }
-
-            }
         }
-
-        #main_container2 {}
+    }
+    .data{
+        width: 45em;
+    }
+    #second{
+        width: 50em;
+        padding: 1em 0;
+        #dataTable{
+            width: 95%;
+        }
+    }
+    #third{
+        width: 50em;
+        padding: 1em 0;
+        #clusteredTable{
+            width: 95%;
+        }
+    }
+    footer{
+        width: 57em;
     }
 }

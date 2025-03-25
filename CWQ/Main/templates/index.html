@@ -35,7 +35,7 @@
         <ul type ="none" id="bar_and_logo">
           <li><i class="fas fa-bars"></i></li>
           <li><img src="../static/clusterLogo-removebg-preview.png" id= "smaller" alt ="Loading..." class="navbaar-img"></img><img class="navbaar-img" src="../static/clusterLogo-removebg-preview.png" id="verysmaller"></img></li>
-
+          <li id="logoText"><h1>QubitSort</h2></li>
         </ul>
         <ul type="none" id="button_and_icon">
           <li><a href="tel: +91 8770006085" alt="Wait a minut" ><i class="fas fa-phone"></i></a></li>
@@ -73,11 +73,11 @@
               <input type="file" name="file" id="getFile" required />
             </div>
             <button type="submit">Upload</button>
-        </form>
-        <h4 style="color: rgb(202, 86, 86);  position: absolute; margin-bottom: -25em; ;">{{error}}</h4>
+          </form>
+            <h4 style="color: rgb(202, 86, 86);  position: absolute; margin-bottom: -25em; ;">{{error}}</h4>
         </div>
       </main>
-      <div id="second">
+      <div id="second" class="data">
         <h1>Your Data</h1>
         <div id="dataTable">
           {% if table %}
@@ -92,7 +92,7 @@
       </div>
 
       <!-- New third container for clustered data -->
-      <div id="third">
+      <div id="third" class="data">
         <h1>Clustered Data</h1>
         <div id="clusteredTable">
           {% if clustered %}
@@ -105,8 +105,16 @@
           {% endif %}
         </div>
       </div>
-      <footer>
-        
-      </footer>
+      <footer class="footer">
+        <div class="footer-container">
+            <p>🚀 Powered by Quantum Intelligence | Fast & Smart Clustering</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="footer-copy">© 2025 Quantum Clustering. All rights reserved.</p>
+        </div>
+    </footer>
   </body>
 </html>
