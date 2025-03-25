@@ -74,16 +74,34 @@
             </div>
             <button type="submit">Upload</button>
         </form>
-        <h4 style="color: rgb(254, 108, 108);  position: absolute; margin-bottom: -25em; ;">{{error}}</h4>
+        <h4 style="color: rgb(202, 86, 86);  position: absolute; margin-bottom: -25em; ;">{{error}}</h4>
         </div>
       </main>
       <div id="second">
-        <h1>Yout Data</h1>
+        <h1>Your Data</h1>
         <div id="dataTable">
           {% if table %}
               {{ table|safe }}
           {% else %}
-              <p style="text-align: center; color: gray; font-size: larger; margin-top: 15em;">Upload a file to see data here.</p>
+              <p style="text-align: center; color: gray; font-size: larger; margin: 4em 0;">
+                  <label for="getFile">Upload a file to see data here.</label>
+              </p>
+              <p style="color: rgb(217, 76, 76);">{{error}}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- New third container for clustered data -->
+      <div id="third">
+        <h1>Clustered Data</h1>
+        <div id="clusteredTable">
+          {% if clustered %}
+              {{ clustered|safe }}
+          {% else %}
+              <p style="text-align: center; color: gray; font-size: larger; margin: 4em 0;">
+                  <label for="getClusteredFile">Upload a file to see clustered data here.</label>
+              </p>
+              <p style="color: rgb(217, 76, 76);">{{error}}</p>
           {% endif %}
         </div>
       </div>

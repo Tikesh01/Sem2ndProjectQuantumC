@@ -28,7 +28,7 @@ main {
 
             h2 {
                 font-family: 'candara';
-                color: black;
+                color:  rgba(0, 0, 0, 0.578);
                 font-size: 5.8rem;
                 text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.792);
                 letter-spacing: 2.5px;
@@ -51,7 +51,7 @@ main {
             }
 
             #withus:hover {
-                color: rgba(0, 0, 0, 0.555);
+                color: rgba(0, 0, 0, 0.632);
                 border-right: 1px solid black;
                 padding-right: 0.5rem;
                 transform: translateX(5px);
@@ -186,10 +186,10 @@ main {
 
 #second {
     width: 100%;
-    height: 42em;
-    padding: 2em 4em;
-    margin: 3em 0;
-    /* background: rgba(255, 255, 255, 0.1); Subtle transparent background */
+    height: auto;
+    padding: 1em 4em;
+    margin-top: 38em;
+    background: rgba(255, 255, 255, 0.1); 
     border-radius: 10px;
     color: rgb(0, 179, 255);
     text-align: center;
@@ -200,7 +200,7 @@ main {
 
 /* Heading styling with hover scale animation */
 #second h1 {
-    margin: 1.5em 0;
+    margin: 1em 0;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -214,14 +214,15 @@ main {
 /* Improved data table with animations and fade-in effect */
 #dataTable {
     width: 70%;
-    max-height: 87%; /* Allows responsiveness */
-    height: 100%;
+    /* height: 30%; */
+    max-height: 37em; /* Allows responsiveness */
+    /* height: 100%; */
     overflow-x: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-overflow-style: none;  /* Hides scrollbar for IE, Edge */
     scrollbar-width: none; 
     font-size: 0.9rem;
-    margin: 1em auto 0;
+    margin: 1.5em auto;
     border: 2px solid rgb(0, 179, 255);
     padding: 1em;
     color: #e6f7ff;
@@ -232,8 +233,7 @@ main {
     .UploadedData {
         width: 100%;
         border-collapse:separate;
-        margin: 20px 0;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
         border-radius: 7px;
         overflow: hidden;
@@ -249,7 +249,7 @@ main {
 
     .UploadedData th {
         background-color: #333; /* Deep gray for headers */
-        color: #FFD700; /* Gold text for a premium look */
+        color: #eaeaea; /* Gold text for a premium look */
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -296,7 +296,53 @@ main {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+#third {
+    width: 100%;
+    height: auto;
+    padding: 1em 4em;
+    margin: 0em auto;
+    background: linear-gradient(135deg, rgba(240,240,240,0.2), rgba(0,150,200,0.2));
+    animation: bgShift 10s infinite alternate ease-in-out;
+    border-radius: 10px;
+    color: #005f73;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: background 0.4s ease;
+}
 
+#third h1 {
+    margin: 1em 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#third h1:hover {
+    color: #3f51b5;
+    transform: scale(1.05);
+}
+
+#clusteredTable {
+    width: 70%;
+    max-height: 37em;
+    overflow-x: auto;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    margin: 1em auto;
+    border: 2px solid rgb(0, 150, 200);
+    padding: 1em;
+    color: #e6f7ff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+#clusteredTable:hover {
+    transform: translateY(-5px);
+    border-color: #3f51b5;
+    box-shadow: 0 8px 16px rgba(0, 150, 200, 0.3);
+}
 @media (min-width: 1660px) and (max-width: 3000px) {
     .upper_of_main {
         display: block;
