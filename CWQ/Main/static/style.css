@@ -1,7 +1,9 @@
 .upper_of_main {
     display: none;
 }
-
+#clusterImg{
+    display: none;
+}
 main {
     width: 85%;
     height: auto;
@@ -422,15 +424,28 @@ main {
     }
 }
 /* Mobile devices (max-width: 500px) */
-@media (max-width: 500px) {
+@media (max-width: 768px){
     body{
         height: auto;
+    }
+    #clusterImg{
+    background-color:  rgba(0, 179, 255, 0.46); 
+    height: 12em; 
+    width: 47em;
+    margin: 0 1.5em;
+    display: block;
+    padding: 1em ; 
+    border-radius: 30px;
+    /* box-shadow: 4px 4px 8px blue; */
+    img{
+        width: 30em
+    }
     }
     main{
         /* background-color: #11111174; */
         width: 50em;
         height: auto;
-        padding: 5em 4em;
+        padding: 0 4em;
         #main_container1{
             float: none;
             width: 100%;
@@ -438,12 +453,14 @@ main {
             border-top: 0.9em black solid;
             border-bottom: none;
             padding: 4em 4em;
+            margin-top: 6em;
         }
         #main_container2{
             float: none;
             width: 100%;
-            margin-bottom: -42em;
+            margin-bottom: -36em;
             border-radius: 80px;
+            margin-top: 2em;
             #inputField{
                 width: 80%;
                 height: 80%;
@@ -467,14 +484,14 @@ main {
             }
         }
     }
-    .data{
-        width: 45em;
-    }
     #second{
         width: 50em;
         padding: 1em 0;
+        
         #dataTable{
             width: 95%;
+            font-size: x-large;
+            max-height: 40em;
         }
     }
     #third{
@@ -482,9 +499,11 @@ main {
         padding: 1em 0;
         #clusteredTable{
             width: 95%;
+            max-height: 40em;
         }
     }
     footer{
         width: 57em;
     }
+
 }
