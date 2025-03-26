@@ -459,7 +459,7 @@ main {
             
             li{
                 h2{
-                    font-size: 6.7em;
+                    font-size: 7em;
                     margin-bottom: -0.1em;
                 }
                 #withus{
@@ -539,4 +539,62 @@ main {
         width: 57em;
     }
 
+    /* Apply a smooth scrolling behavior */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar styling for WebKit browsers */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 179, 255, 0.5);
+        border-radius: 10px;
+        transition: background 0.3s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 179, 255, 0.8);
+    }
+
+    /* Firefox scrollbar style */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 179, 255, 0.5) rgba(0,0,0,0.1);
+    }
+    
+    /* Enhanced scrolling experience */
+    html {
+        scroll-behavior: smooth;
+        scroll-snap-type:  mandatory;
+    }
+    
+    /* Apply snap & transition effects to major containers */
+    main, footer, #second, #third {
+        scroll-snap-align: start;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+    
+    /* Optional: a reusable class for elements that animate into view */
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(0px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    /* When an element gets the 'scrolled' class (using JS or :target trick), it animates */
+    .animate-on-scroll.scrolled {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Example: Enhance scrolling table transitions */
+    #dataTable, #clusteredTable {
+        scroll-snap-align: start;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
 }

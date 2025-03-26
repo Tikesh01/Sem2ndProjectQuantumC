@@ -17,10 +17,11 @@ body {
   background-attachment: fixed;
 }
 
+/* Default nav styles */
 #header_and_navbaar {
   width: 100%;
   height: auto;
-  background-color: rgb(241, 240, 240);
+  background: linear-gradient(135deg, #0e2a47, rgba(1,2,5,1));
 }
 
 nav {
@@ -58,13 +59,14 @@ nav {
   }
 }
 
+/* For larger devices */
 @media (min-width: 769px) and (max-width: 3000px) {
   button {
     box-shadow: 0 2p 3px rgb(1, 86, 204);
   }
 
   #header_and_navbaar {
-    background-color: black;
+    background: linear-gradient(135deg, #0e2a47, rgba(1,2,5,1));
     color: white;
 
     #header {
@@ -307,7 +309,7 @@ nav {
 }
 
 /*STYLE FOR SMALLER DEVICES */
-@media (min-width: 541px) and (max-width: 769px) {
+@media (min-width: 541px) and (max-width: 768px) {
   button {
     width: 6em;
     height: 2.2em;
@@ -319,7 +321,8 @@ nav {
   }
 
   #header_and_navbaar {
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, #0e2a47, rgba(1,2,5,1));
+    /* Remove or replace the previous background-color setting */
 
     p {
       display: flex;
@@ -338,11 +341,11 @@ nav {
   #smallerdevice {
     width: 100%;
     height: 7.5em;
-    background: linear-gradient(90deg, rgb(204, 213, 220), rgb(137, 137, 200), rgb(165, 186, 196));
+    background: linear-gradient(135deg, #0e2a47, rgba(1,2,5,1));
     padding: 0 2em;
     box-shadow: 0 2px 4px black;
     font-size: smaller;
-    
+        
     #logoText {
       margin-left: 0.2em;
       font-size: xx-large;
@@ -410,7 +413,7 @@ nav {
   }
 
   #header_and_navbaar {
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, #0e2a47, rgba(1,2,5,1));
 
     p {
       display: flex;
@@ -433,8 +436,7 @@ nav {
   #smallerdevice {
     width: 100%;
     height: 8em;
-    background: linear-gradient(90deg, rgb(214, 49, 77), rgb(38, 38, 116), rgb(56, 27, 27));
-    background: linear-gradient(90deg, rgb(204, 213, 220), rgb(137, 137, 200), rgb(165, 186, 196));
+    background: linear-gradient(135deg, #0e2a47, rgba(1,2,5,1));
     padding: 0rem 2em;
     box-shadow: 0 2px 4px black;
     font-size: smaller;
@@ -538,7 +540,7 @@ nav {
     }
 
     #smallerdevice {
-      height: 9.3em;
+      height: 8.5em;
       font-size: small;
       padding: 0 2.5em;
 
