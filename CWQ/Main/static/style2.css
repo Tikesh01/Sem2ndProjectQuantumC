@@ -307,7 +307,7 @@ nav {
 }
 
 /*STYLE FOR SMALLER DEVICES */
-@media (min-width: 540px) and (max-width: 769px) {
+@media (min-width: 541px) and (max-width: 769px) {
   button {
     width: 6em;
     height: 2.2em;
@@ -337,15 +337,15 @@ nav {
 
   #smallerdevice {
     width: 100%;
-    height: 4.8em;
+    height: 7.5em;
     background: linear-gradient(90deg, rgb(204, 213, 220), rgb(137, 137, 200), rgb(165, 186, 196));
-    padding: 1rem 1.7em;
+    padding: 0 2em;
     box-shadow: 0 2px 4px black;
     font-size: smaller;
-
+    
     #logoText {
-      margin-left: 0.5em;
-      font-size: x-large;
+      margin-left: 0.2em;
+      font-size: xx-large;
       margin-top: -0.1em;
     }
 
@@ -361,9 +361,9 @@ nav {
       img {
         max-width: 100%;
         height: auto;
-        height: 3.5rem;
+        height: 5rem;
         margin-left: 1.5rem;
-        width: 3.5rem;
+        width: 5rem;
       }
 
       #verysmaller {
@@ -378,12 +378,15 @@ nav {
       width: auto;
       height: 100%;
       float: right;
-
+      #login{
+        font-size: larger;
+      }
       li {
-        margin-left: 6.2em;
+        margin-left: 4em;
 
         a {
           color: rgb(230, 230, 230);
+          font-size: x-large;
         }
       }
     }
@@ -394,7 +397,6 @@ nav {
   #bigsize {
     display: none;
   }
-
   button {
     width: 5.5em;
     height: 2.7em;
@@ -404,6 +406,7 @@ nav {
 
   #login {
     width: 5.5em;
+    font-size: large;
   }
 
   #header_and_navbaar {
@@ -429,25 +432,24 @@ nav {
 
   #smallerdevice {
     width: 100%;
-    height: 3.6rem;
+    height: 8em;
     background: linear-gradient(90deg, rgb(214, 49, 77), rgb(38, 38, 116), rgb(56, 27, 27));
     background: linear-gradient(90deg, rgb(204, 213, 220), rgb(137, 137, 200), rgb(165, 186, 196));
-
-    padding: 2rem 1rem;
+    padding: 0rem 2em;
     box-shadow: 0 2px 4px black;
     font-size: smaller;
     color: rgb(230, 230, 230);
 
     #logoText {
-      margin-left: 1.5em;
-      font-size: x-large;
+      /* margin-left: 1.5em; */
+      font-size: xx-large;
       margin-top: -0.1em;
     }
 
     @media (max-width: 450px) {
       #logoText {
-        margin-left: -0.7em;
-        font-size: x-large;
+        margin-left: 0;
+        font-size: xx-large;
         margin-top: -0.1em;
       }
     }
@@ -462,16 +464,19 @@ nav {
       color: rgb(230, 230, 230);
 
       img {
-        max-width: 100%;
+        /* max-width: 100%; */
         height: auto;
-        height: 4em;
-        width: 4em;
-        margin: 0 1.8rem;
+        height: 7em;
+        width: 7.5em;
+        margin: 0 1rem;
       }
 
 
       #verysmaller {
         display: none;
+      }
+      #smaller{
+          width: 9em;
       }
 
       @media (max-width: 450px) {
@@ -500,8 +505,8 @@ nav {
       float: right;
 
       li {
-        margin-left: 5em;
-        font-size: 19px;
+        margin-left: 2em;
+        font-size: 25px;
 
         a {
           color: rgb(230, 230, 230);
@@ -510,8 +515,11 @@ nav {
     }
 
     @media (max-width: 450px) {
-      #buttn_and_icon {
-        font-size: 2px;
+      #button_and_icon {
+        font-size: xx-large;
+        #login{
+          font-size: large;
+        }
 
         a {
           color: rgb(230, 230, 230);
@@ -530,28 +538,29 @@ nav {
     }
 
     #smallerdevice {
-      height: 7.5em;
-      font-size: x-small;
-      padding: 1rem 1.5em;
+      height: 9.3em;
+      font-size: small;
+      padding: 0 2.5em;
 
       button {
-        font-size: small;
+        font-size: large;
       }
 
       #bar_and_logo {
         #verysmaller {
-          height: 5.3em;
-          width: 5.3em;
-          margin-left: 2em;
+          height: 7em;
+          width: 7em;
+          margin-left: 1em;
         }
       }
       #logoText{
-        font-size: x-large;
+        font-size: xx-large;
+        margin-left: -0.5em;
       }
       #button_and_icon {
         li {
-          margin-left: 5em;
-          font-size: 20px;
+          margin-left: 2em;
+          font-size: 25px;
         }
       }
     }

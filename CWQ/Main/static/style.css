@@ -192,7 +192,7 @@ main {
     padding: 2em 4em;
     margin-top: 39em;
     background: rgba(255, 255, 255, 0.1); 
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: rgb(0, 179, 255);
     text-align: center;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
@@ -305,7 +305,7 @@ main {
     margin: 0em auto;
     background: linear-gradient(135deg, rgba(240,240,240,0.2), rgba(0,150,200,0.2));
     animation: bgShift 10s infinite alternate ease-in-out;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: #005f73;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -427,33 +427,52 @@ main {
 @media (max-width: 768px){
     body{
         height: auto;
+        width: 100%;
     }
     #clusterImg{
-    background-color:  rgba(0, 179, 255, 0.46); 
-    height: 12em; 
-    width: 47em;
-    margin: 0 1.5em;
-    display: block;
-    padding: 1em ; 
-    border-radius: 30px;
-    /* box-shadow: 4px 4px 8px blue; */
-    img{
-        width: 30em
-    }
+        background-color:  rgba(0, 179, 255, 0.46); 
+        height: 14em; 
+        width: 47em;
+        margin: 0 1.5em;
+        display: block;
+        padding: 2em ; 
+        border-radius: 30px;
+        /* box-shadow: 4px 4px 8px blue; */
+        img{
+        width: 32em
+        }
     }
     main{
         /* background-color: #11111174; */
         width: 50em;
         height: auto;
-        padding: 0 4em;
+        padding: 0 2em;
+
         #main_container1{
             float: none;
             width: 100%;
             border-radius: 80px;
             border-top: 0.9em black solid;
             border-bottom: none;
-            padding: 4em 4em;
-            margin-top: 6em;
+            padding: 1em 3.5em;
+            margin-top: 7em;
+            
+            li{
+                h2{
+                    font-size: 6.7em;
+                    margin-bottom: -0.1em;
+                }
+                #withus{
+                    font-size: 3.5em;
+                    margin-top: 0.1em;
+                }
+            }
+            
+            #explorebuttonli{
+                button{
+                    font-size: larger;
+                }
+            }
         }
         #main_container2{
             float: none;
@@ -461,22 +480,31 @@ main {
             margin-bottom: -36em;
             border-radius: 80px;
             margin-top: 2em;
+            /* background: none; */
             #inputField{
-                width: 80%;
-                height: 80%;
+                width: 90%;
+                height: 90%;
                 margin-bottom: -1em;
-                padding: 3em 3em;
-                font-size: larger;
+                padding: 1em 2em;
+                font-size: xx-large;
+                h1{
+                    text-align: center;
+                }
                 #inputAndLabel{
-                    margin-top: 3.5em;
+                    margin-top: 2em;
+                    font-size: xx-large;
+                    .plus{
+                        font-size: 50px;
+                    }
                 }
                 button{
                     width: 70%;
                     height: 12%;
                     background-color: rgb(0, 179, 255);
-                    font-size: large;
-                    margin-top: 4em;
-                    color: black;
+                    font-size: x-large;
+                    margin-top: 3em;
+                    color: rgb(255, 255, 255);
+                    border-radius: 60px;
                 }
                 button:hover{
                     border-right: 30px solid white;
@@ -486,20 +514,25 @@ main {
     }
     #second{
         width: 50em;
-        padding: 1em 0;
-        
+        padding: 0.7em 0;
+        h1{
+            font-size: 45px;
+        }
         #dataTable{
-            width: 95%;
+            width: 90%;
             font-size: x-large;
-            max-height: 40em;
+            max-height: 30em;
         }
     }
     #third{
         width: 50em;
         padding: 1em 0;
+        h1{
+            font-size: 45px;
+        }
         #clusteredTable{
-            width: 95%;
-            max-height: 40em;
+            width: 90%;
+            max-height: 30em;
         }
     }
     footer{
