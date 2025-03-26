@@ -94,7 +94,7 @@ main {
         width: 45%;
         float: right;
         border-top: rgba(255, 255, 255, 0.921) solid 0.9em;
-        background-image: url(../static/paperbackground.png);
+        background-image: url(paperbackground.png);
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
