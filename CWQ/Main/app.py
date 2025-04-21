@@ -7,7 +7,7 @@ from io import StringIO
 from jinja2 import Environment
 app = Flask(__name__)
 env = Environment(autoescape=True)
-MainDF = pd.DataFrame()#This is created to share the files content one to another function
+MainDFf = pd.DataFrame()#This is created to share the files content one to another function
 @app.route('/')
 def interface():
     return render_template('index.html')
@@ -34,7 +34,7 @@ def printTable(type,filePath):
     if type == "csv":
         df = pd.read_csv(filePath)
         df = df.dropna(how="all")  # Remove empty rows
-        MainDF = df
+        MainDFf = df
         return render_template("index.html", table=df.to_html(classes="UploadedData", border=0))
     if type == "xls" or "xlsx":
         pass
