@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/style.css" />
+  <link rel="stylesheet" type="text/css" href="../static/style2.css" />
+  <link rel="stylesheet" type ="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel= "shortcut icon" type="icon/image" href="../static/clusterLogo-removebg-preview.webp" />
+  <title>QUBITSORT - Accelerate Growth with Quantum clustering</title>
+</head>
+  <body>
+    <ul type="none" id="header_and_navbaar">
+      <li>
+      <nav id="bigsize" class="Navbaar">
+        <ul type="none" id ="nav_container1" class="nav_container">
+          <li id="image"><img src="../static/clusterLogo-removebg-preview.webp" alt="Loading..." width="350px" height="350px" class="navbaar-img"></img></li>
+          <li id="headers">
+            <a href="">Products & Services</a>
+            <a href="">About Us</a>
+            <a href="">Home</a>
+            <a href="">Contact Us</a>
+            <a href="#">New</a>
+          </li>
+        </ul>
+
+        <ul type ="none" id="nav_container2" class="nav_container">
+          <li><a href="#"><i class="fab fa-instagram" id="navbar_instaicon"></i></a></li>
+          <li><button id="login" class="buttons">Sign in</button></li>
+          <!-- <li><button id="signup" class="buttons">Sign Up</button></li> -->
+        </ul>
+      </nav>
+
+      <nav id="smallerdevice" class="Navbaar">
+        <ul type ="none" id="bar_and_logo">
+          <li><i class="fas fa-bars"></i></li>
+          <li><img src="../static/clusterLogo-removebg-preview.webp" id= "smaller" alt ="Loading..." class="navbaar-img"></img><img class="navbaar-img" src="../static/clusterLogo-removebg-preview.webp" id="verysmaller"></img></li>
+          <li id="logoText" style="letter-spacing: 2px;"><h1>QUBITSORT</h2></li>
+        </ul>
+        <ul type="none" id="button_and_icon">
+          <li><a href="tel: +91 8770006085" alt="Wait a minut" ><i class="fas fa-phone"></i></a></li>
+          <li><a href="email: ts2665857@gmail.com" alt="Wait a minut" ><i class="fa-duotone fa-solid fa-envelope" style="--fa-primary-color: #ffd43b; --fa-secondary-color: pink;"></i></li></a></li>
+          <li><button id="login" class="buttons">Sign in</button></li>
+          <!-- <li><button id="signup" class="buttons">Sign Up</button></li> -->
+        </ul>
+      </nav></li>
+      <li id="header">
+        <header><p>Smarter Insights, Faster Decisions</p></header>
+      </li>
+    </ul>
+    <div id="upper1_of_main" class ="upper_of_main">
+      <p>Smarter Insights,</p>
+    </div>
+    <div id="upper2_of_main" class ="upper_of_main">
+      <p>Faster Decisions!</p>
+    </div>              
+      <main>
+        <div class="main_container" id="main_container1">
+          <ul type="disc">
+            <li> <h2>A</h2><h2>c</h2><h2>c</h2><h2>e</h2><h2>l</h2><h2>e</h2><h2>r</h2><h2>a</h2><h2>t</h2><h2>e</h2></li>
+            <li><h2>G</h2><h2>r</h2><h2>o</h2><h2>w</h2><h2>t</h2><h2>h</h2><span>.....</span><h2>w</h2><h2>i</h2><h2>t</h2><h2>h</h2></li>
+            <li id="Quantum"><h2><i class="fas fa-atom" style="color: #361249;"></i></h2>
+              <h2>Q</h2><h2>u</h2><h2>a</h2><h2>n</h2><h2>t</h2><h2>u</h2><h2>m</h2></li>
+            <li><h1 id="withus">Clustering</h2></li>
+            <li id="explorebuttonli"><button link="#features"> <i class="fas fa-compass" style="margin-right: 6px;"></i>Explore</button></li>
+          </ul>
+        </div>
+      </main>
+        <div id="clusterImg">
+          <img src="../static/ClusteringImg-removebg-preview.webp" alt="img..." >
+        </div>
+      <main>
+        <div class="main_container" id="main_container2">
+          <form action="/uploader" method="Post" enctype="multipart/form-data" id="inputField">
+            <h1>Upload Your File</h2>
+            <div id="inputAndLabel">
+              <label >Choose File</label>
+              <label for="getFile" class="plus"><i class="fas fa-upload"></i>
+              </label>
+              <input type="file" name="file" id="getFile" required />
+            </div>
+            <button type="submit"><a href="#second"><i class="fas fa-file-upload" style="margin-right: 6px;"></i>Upload</a></button>
+          </form>
+            <h4 style="color: rgb(202, 86, 86);  position: absolute; margin-bottom: -25em; ;">{{error}}</h4>
+        </div>
+      </main>
+      </section>
+      <div id="second" class="data">
+        <h1><i class="fas fa-folder-open"></i> Your Data</h1>
+        <div id="dataTable">
+          {% if table %}
+              {{ table|safe }}
+          {% else %}
+              <p style="text-align: center; color: gray; font-size: larger; margin: 4em 0;">
+                  <label for="getFile">Upload a file to see data here.</label>
+              </p>
+              <p style="color: rgb(217, 76, 76);">{{error}}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% if note or quote%}
+      <section id="question">
+        {% if note  %}
+        <div class="middle" id="dateTime">
+          <h3>
+            <i class="fas fa-calendar-alt" style="margin-right: 6px; color: #2c3e50;"></i> 
+            Looks like your data includes a <strong>datetime</strong> or <strong>year</strong> column.
+          </h3>          
+          <form action="/askUserClustAccDateTime" method="POST" enctype="multipart/form-data" id="askFordateTime">
+            <h4 id="ques">
+              <i class="fas fa-question-circle" style="color: #9b59b6; margin-right: 6px;"></i>
+              What would you like to do with the datetime column?
+            </h4>
+      
+            <div>
+              <input type="radio" name="useDateTime" id="ase" value="1">
+              <label for="ase">
+                <i class="fas fa-sort-amount-up-alt" style="color: #2980b9; margin-right: 5px;"></i>
+                Cluster by <span>Ascending order</span>
+              </label>
+            </div>
+      
+            <div>
+              <input type="radio" name="useDateTime" id="des" value="2">
+              <label for="des">
+                <i class="fas fa-sort-amount-down-alt" style="color: #c0392b; margin-right: 5px;"></i>
+                Cluster by <span>Descending order</span>
+              </label>
+            </div>
+      
+            <div>
+              <input type="radio" name="useDateTime" id="nooo" value="0" required>
+              <label for="nooo">
+                <i class="fas fa-times-circle" style="color: #7f8c8d; margin-right: 5px;"></i>
+                Do not cluster using datetime column
+              </label>
+            </div>
+      
+            <div id="button">
+              <button type="submit" name="useDateTime" value="1">
+                <i class="fas fa-arrow-right" style="margin-right: 6px;"></i> Next
+              </button>
+            </div>
+          </form>
+        </div>      
+      {% else %}
+      {% endif %} 
+      
+      {% if quote %}
+      <div class="middle" id="priority">
+        <h3>
+          <i class="fas fa-layer-group" style="margin-right: 6px; color: #34495e;"></i>
+          Do you want to define custom clustering priorities for these columns?
+        </h3>        
+        <form action="/start" method="POST" enctype="multipart/form-data" id="askForHeirarchy">
+          <h4>
+            <i class="fas fa-sort-numeric-up-alt" style="margin-right: 5px; color: #2980b9;"></i>
+            Smaller number = higher priority
+          </h4>
+      
+          {% for i in columns %}
+            <div style="margin: 0.6em 0;">
+              <label style="margin-right: 0.5em; font-weight: 600;">
+                <i class="fas fa-columns" style="margin-right: 4px; color: #7f8c8d;"></i> {{i}}:
+              </label>
+              <input type="number" name="{{i}}" min="1" placeholder="e.g. 1" >
+            </div>
+          {% endfor %}
+      
+          <div id="button">
+            <button type="reset" name="skipped"value="0">
+              <i class="fas fa-forward" style="margin-right: 4px;"></i> Skip
+            </button>
+            <button type="submit" name="done" value="">
+              <i class="fas fa-project-diagram" style="margin-right: 4px;"></i> Cluster
+            </button>
+          </div>
+        </form>
+      </div>      
+      {% else %}
+      {% endif %} 
+
+    </section>
+    {% else %}
+    {% endif %} 
+      <div id="third" class="data">
+        <h1><i class="fas fa-layer-group" style="color: #3498db;"></i> Clustered Data</h1>
+        <div id="clusteredTable">
+          {% if clusteredData %}
+              {{ clusteredData|safe }}
+          {% else %}
+              <p style="text-align: center; color: gray; font-size: larger; margin: 4em 0;">
+                  <label for="getClusteredFile">Upload a file to see clustered data here.</label>
+              </p>
+              <p style="color: rgb(217, 76, 76);">{{error2}}</p>
+          {% endif %}
+        </div>
+      </div>
+      <section class="features-section" id="features">
+        <div class="features-container">
+          <h2 class="section-title">Why Choose Our Quantum Clustering?</h2>
+          <p class="tagline">Your data has answers — we help you find them.</p>
+      
+          <div class="features-grid">
+            <div class="feature-box">
+              <h3>🧠 Smart Clustering</h3>
+              <p>Detects hidden patterns in your data using quantum-powered insights.</p>
+            </div>
+            <div class="feature-box">
+              <h3>📁 Easy CSV Upload</h3>
+              <p>No tech knowledge needed. Just upload your file and go.</p>
+            </div>
+            <div class="feature-box">
+              <h3>📊 Visual Results</h3>
+              <p>See customer groups in clean, interactive tables & charts.</p>
+            </div>
+            <div class="feature-box">
+              <h3>🎯 Targeted Insights</h3>
+              <p>Find the right customer segment to boost your sales.</p>
+            </div>
+            <div class="feature-box">
+              <h3>⚡ Fast Processing</h3>
+              <p>Large files? No problem — Quantum makes it blazing fast.</p>
+            </div>
+            <div class="feature-box">
+              <h3>🕹️ Simple UI</h3>
+              <p>Built for small businesses — clean, intuitive, and fast.</p>
+            </div>
+          </div>
+        </div>
+      </section>      
+      <footer class="footer">
+        <div class="footer-container">
+            <p>🚀 Powered by Quantum Intelligence | Fast & Smart Clustering</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p class="footer-copy">© 2025 Quantum Clustering. All rights reserved.</p>
+        </div>
+    </footer>
+  </body>
+</html>
